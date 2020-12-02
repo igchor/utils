@@ -1,0 +1,8 @@
+alias c++_tmpl_filt_='sed "s/<[^<>]*>/{}/g"'
+alias c++_tmpl_filt='c++_tmpl_filt_ | c++_tmpl_filt_ | c++_tmpl_filt_ | c++_tmpl_filt_ | c++_tmpl_filt_ | c++_tmpl_filt_ | c++_tmpl_filt_ | sed "s/{}/<>/g"'
+alias gd='git diff'
+alias gs='git status'
+alias lock='gnome-screensaver-command -l'
+
+xrandr --output DP-5 --pos 0x0
+xrandr --output DP-2 --pos 3440x0
