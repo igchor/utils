@@ -176,11 +176,14 @@ exec --no-startup-id '/home/igor/fix_monitors.sh'
 exec --no-startup-id i3-msg 'workspace 1; append_layout /home/igor/.config/i3/workspace1.json'
 exec --no-startup-id i3-msg 'workspace 2; append_layout /home/igor/.config/i3/workspace2.json'
 
-bindsym $mod+g exec ~/init_workspace.sh
-
 #exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/code /home/igor/Projects/pmemkv;'
 #exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/code /home/igor/Projects/pmdk;'
 #exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/code /home/igor/Projects/libpmemobj-cpp;'
 
-#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/google-chrome;'
-#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/spotify;'
+#exec --no-startup-id i3-msg 'exec bash -c /home/igor/fix_monitors.sh;'
+
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/google-chrome;'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/gnome-terminal;'
+
+for_window [class="Spotify"] move window to workspace 2
+exec --no-startup-id i3-msg 'exec /usr/share/spotify/spotify;'
