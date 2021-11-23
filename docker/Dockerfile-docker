@@ -1,0 +1,14 @@
+# sudo docker run --net=host --cap-add=SYS_ADMIN --cap-add=SYS_PTRACE --privileged --tmpfs /tmp -v /your/workspace:/opt/workspace:z -w /opt/workspace/ -it cachelib-vtune:centos-8 /bin/bash
+# --net=host might be insecure
+#
+# /var/vtune/vtune/2021.9.0/bin64/vtune-backend --allow-remote-access --web-port=5900 --enable-server-profiling
+
+FROM cachelib:centos-8
+
+RUN dnf install -y \
+libnotify \
+kernel-devel \
+wget
+
+RUN wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18302/l_oneapi_vtune_p_2021.9.0.545_offline.sh && \
+    bash ./l_oneapi_vtune_p_2021.9.0.545_offline.sh -a --action install --install-dir /var/vtune --eula accept -s
