@@ -5,4 +5,5 @@ alias flame='sudo /home/igchor/bin/perf script | ~/Projects/FlameGraph/stackcoll
 alias pmem_conf='PKG_CONFIG_PATH=/home/igchor/libs/nvml-rel/lib/pkgconfig:/home/igchor/libs/syscall_intercept-rel/lib/pkgconfig LD_LIBRARY_PATH=/home/igchor/libs/nvml-rel/lib:/home/igchor/libs/syscall_intercept-rel/lib'
 alias tren='trans en:pl'
 alias trpl='trans pl:en'
+alias clip='xclip -selection clipboard'
 
