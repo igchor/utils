@@ -1,0 +1,4 @@
+template <typename R, typename... Args>
+std::tuple<Args...> arguments(R(*)(Args...));
+
+#define FUNCTION_ARGUMENTS(function) decltype(arguments(function))
